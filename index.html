@@ -1,0 +1,26 @@
+<!--  Web-Programming 1419288 16/10/2013
+	-->
+
+
+<html><body>
+<?php
+$db = mysqli_connect("localhost", "root", "", "people");
+$query = "SELECT * FROM person";
+$result = mysqli_query($db, $query);
+while($row = mysqli_fetch_array($result)) // get the next row and check that a valid row was returned
+{
+
+
+
+
+
+
+
+$firstname = $row['firstname']; // get field from row by name
+$lastname = $row['lastname'];
+$address = $row['address'];
+print "Hello $firstname $lastname <BR> ";
+print "Your address is $address";
+}
+?>
+</body></html>
